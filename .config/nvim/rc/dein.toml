@@ -1,0 +1,80 @@
+#vim:setlocal foldmethod = indent
+[[plugins]]
+	repo = 'Shougo/vimproc'
+	[plugins.build]
+		windows = 'tools\\update-dll-mingw'
+		cygwin  = 'make -f make_cygwin.mak'
+		mac     = 'make -f make_mac.mak'
+		unix    = 'make'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+[[plugins]]
+repo = 'Shougo/echodoc'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]]
+repo = 'Lokaltog/vim-easymotion'
+hook_add = '''
+source ~/.config/nvim/rc/plugins/easymotion.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+source ~/.config/nvim/rc/plugins/lightline.rc.vim
+'''
+
+[[plugins]]
+repo = 'fuenor/im_control.vim'
+hook_add = '''
+source ~/.config/nvim/rc/plugins/im_control.rc.vim
+'''
+
+[[plugins]]
+repo = 'kana/vim-submode'
+hook_add = '''
+source ~/.config/nvim/rc/plugins/submode.rc.vim
+'''
+
+[[plugins]]
+repo = 'sickill/vim-monokai'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'thinca/vim-ref'
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+
+[[plugins]]
+repo = 'jceb/vim-orgmode'
+hook_add = '''
+source ~/.config/nvim/rc/plugins/vim-orgmode.rc.vim
+'''
+
+[[plugins]]
+repo = 'sorah/unite-ghq'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'

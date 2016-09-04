@@ -1,0 +1,9 @@
+[core]
+	editor = nvim
+[user]
+	name = Severnaya
+	email = severnayavverkh@gmail.com
+
+[ghq]
+    root = ~/src
+    root = ~/go/src
