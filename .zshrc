@@ -65,7 +65,7 @@ export PATH=$ANT_ROOT:$PATH
 export PATH="/usr/lib/ccache/bin/:/usr/local/bin/:$PATH"
 
 #go
-export GOPATH=$HOME/go
+export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 
 #cdr
