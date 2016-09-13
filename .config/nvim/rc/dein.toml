@@ -78,3 +78,9 @@ repo = 'sorah/unite-ghq'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'kmnk/vim-unite-giti'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
