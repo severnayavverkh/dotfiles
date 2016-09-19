@@ -4,7 +4,7 @@
 .*secret
 .config/*
 !.config/nvim
-.emacs.d
+.emacs.d/*
 !.emacs.d/init-loader
 !.emacs.d/inits
 bin/*
