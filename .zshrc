@@ -20,6 +20,12 @@ zplug "peco/peco", as:command, from:gh-r
 
 zplug "~/.zsh", from:local
 
+zplug "mafredri/zsh-async", on:sindresorhus/pure
+
+zplug "sindresorhus/pure"
+
+zplug "b4b4r07/cli-finder"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -31,15 +37,7 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
-# Prompt
-autoload -U promptinit
-promptinit
-
-# Plugins installed by ghq
-GHQ=$HOME/src/github.com
-source $GHQ/b4b4r07/cli-finder/cli-finder.zsh
-
-# Customize to your needs...
+# Editor
 EDITOR=/usr/bin/nvim
 export EDITOR
 export VISUAL=$EDITOR
