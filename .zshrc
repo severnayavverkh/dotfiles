@@ -31,6 +31,10 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
+# Prompt
+autoload -U promptinit
+promptinit
+
 # Plugins installed by ghq
 GHQ=$HOME/src/github.com
 source $GHQ/b4b4r07/cli-finder/cli-finder.zsh
