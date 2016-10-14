@@ -1,6 +1,6 @@
 export ENHANCD_COMMAND=ecd
 
-source ~/.zplug/init.zsh
+source ~/.linuxbrew/opt/zplug/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 
@@ -35,10 +35,26 @@ zplug load --verbose
 GHQ=$HOME/src/github.com
 source $GHQ/b4b4r07/cli-finder/cli-finder.zsh
 
-# Customize to your needs...
+# Editor
 EDITOR=/usr/bin/nvim
 export EDITOR
 export VISUAL=$EDITOR
+
+#HISTORY
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
 
 # Linuxbrew
 export PATH="$HOME/.linuxbrew/bin:$PATH"
