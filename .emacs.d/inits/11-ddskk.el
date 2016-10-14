@@ -1,5 +1,0 @@
-(setq skk-server-host "127.0.0.1")
-(setq skk-server-portnum 1178)
-(global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
-(setq default-input-method "japanese-skk")
-(require 'skk-study)
