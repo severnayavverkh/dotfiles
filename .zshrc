@@ -90,7 +90,6 @@ setopt EXTENDED_HISTORY
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-
 #cdr
     # cdr, add-zsh-hook を有効にする
     autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -102,5 +101,8 @@ bindkey '^N' history-beginning-search-forward
     zstyle ':chpwd:*' recent-dirs-default true
     zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
     zstyle ':chpwd:*' recent-dirs-pushd true
+
+#thef*ck
+eval "$(thefuck --alias)"
 
 alias tmux="tmux -2"
