@@ -20,6 +20,12 @@ zplug "peco/peco", as:command, from:gh-r
 
 zplug "~/.zsh", from:local
 
+zplug "mafredri/zsh-async", on:sindresorhus/pure
+
+zplug "sindresorhus/pure"
+
+zplug "b4b4r07/cli-finder"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -30,10 +36,6 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
-
-# Plugins installed by ghq
-GHQ=$HOME/src/github.com
-source $GHQ/b4b4r07/cli-finder/cli-finder.zsh
 
 # Editor
 EDITOR=/usr/bin/nvim
@@ -84,6 +86,26 @@ export PATH="/usr/lib/ccache/bin/:/usr/local/bin/:$PATH"
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 
+#History
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
+
+# history search
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
+
 #cdr
     # cdr, add-zsh-hook を有効にする
     autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -95,5 +117,8 @@ export PATH=$PATH:$GOPATH/bin
     zstyle ':chpwd:*' recent-dirs-default true
     zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
     zstyle ':chpwd:*' recent-dirs-pushd true
+
+#thef*ck
+eval "$(thefuck --alias)"
 
 alias tmux="tmux -2"
